@@ -1,23 +1,37 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
+  parser: 'vue-eslint-parser',
   parserOptions: {
+    parser: '@typescript-eslint/parser',
     ecmaVersion: 'latest',
     project: 'tsconfig.json',
     tsconfigRootDir: __dirname,
   },
   extends: [
-    'airbnb',
-    'airbnb-typescript',
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:vue/vue3-recommended',
+    '@vue/typescript',
+    'plugin:vuejs-accessibility/recommended',
+    'plugin:vue-scoped-css/vue3-recommended',
   ],
   plugins: [
     '@typescript-eslint',
+    'html',
+    'vue',
+    'vuejs-accessibility',
+    'vue-scoped-css',
   ],
   env: {
     browser: true,
     node: true,
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.ts', '.vue'],
+      },
+    },
   },
   rules: {
     '@typescript-eslint/no-empty-interface': 'off',

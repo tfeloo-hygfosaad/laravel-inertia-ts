@@ -7,10 +7,10 @@
     "prepare": "husky install",
     "dev": "vite",
     "build": "vite build && vite build --ssr",
-    "lint": "eslint . --ext js,jsx,ts,tsx --config .eslintrc.js --no-eslintrc --ignore-path .gitignore --ignore-pattern public"
+    "lint": "eslint . --ext js,ts,vue --config .eslintrc.js --no-eslintrc --ignore-path .gitignore --ignore-pattern public"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
+    "*.{js,jsx,vue}": [
       "eslint --config .eslintrc.js --no-eslintrc --ignore-path .gitignore --ignore-pattern public",
       "git add"
     ]
@@ -18,22 +18,25 @@
   "dependencies": {
     "@inertiajs/vue3": "^1.0.0",
     "@tailwindcss/forms": "^0.5.3",
+    "@vitejs/plugin-vue": "^4.0.0",
     "@vue/server-renderer": "^3.2.31",
     "axios": "^1.3.4",
     "laravel-vite-plugin": "^0.7.2",
     "tailwindcss": "^3.2.1",
     "vite": "^4.0.0",
     "vite-plugin-eslint": "^1.8.1",
-    "vue": "^3.2.41",
-    "@vitejs/plugin-vue": "^4.0.0"
+    "vue": "^3.2.41"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.55.0",
     "@typescript-eslint/parser": "^5.55.0",
+    "@vue/eslint-config-typescript": "^11.0.2",
     "autoprefixer": "^10.4.12",
     "eslint": "^8.36.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "eslint-plugin-vue-scoped-css": "^2.4.0",
+    "eslint-plugin-vuejs-accessibility": "^2.1.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
     "postcss": "^8.4.18",
