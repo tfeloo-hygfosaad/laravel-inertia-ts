@@ -17,5 +17,10 @@
     "strict": true,
     "skipLibCheck": true,
     "target": "ESNext"
-  }
+  },
+  "include": [
+    "./resources/js/**/*",
+    "./*.js",
+    ".eslintrc.js"
+  ]
 }

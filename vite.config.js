@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import eslint from 'vite-plugin-eslint'
+import eslint from 'vite-plugin-eslint';
 import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 
